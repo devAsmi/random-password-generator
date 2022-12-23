@@ -80,11 +80,11 @@ var specialCharacters = [
 // function to generate the password based on user input
 function generatePassword() {
   var listOfDesiredCharacters = [];
-  var numberOfCharacters = window.prompt(
+  var desiredPasswordLength = window.prompt(
     "Select the number of characters for Password."
   );
 
-  if (numberOfCharacters < 8 || numberOfCharacters >= 128) {
+  if (desiredPasswordLength < 8 || desiredPasswordLength >= 128) {
     window.alert("Number of character must be between 8 and 128! ");
     return undefined;
   }
@@ -131,7 +131,7 @@ function generatePassword() {
    */
   var password = "";
 
-  for (var i = 0; i < numberOfCharacters; i++) {
+  for (var i = 0; i < desiredPasswordLength; i++) {
     var randomIndex = Math.floor(
       Math.random() * listOfDesiredCharacters.length
     );
